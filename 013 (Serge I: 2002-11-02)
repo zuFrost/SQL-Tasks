@@ -1,0 +1,7 @@
+--https://sql-ex.ru/learn_exercises.php#answer_ref
+--Найдите среднюю скорость ПК, выпущенных производителем A. 
+
+SELECT AVG(speed) FROM PC 
+RIGHT JOIN Product
+ON PC.model = Product.model
+WHERE maker = 'A'
