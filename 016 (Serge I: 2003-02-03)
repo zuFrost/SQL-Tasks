@@ -1,0 +1,11 @@
+--https://sql-ex.ru/learn_exercises.php#answer_ref
+--Найдите пары моделей PC, имеющих одинаковые скорость и RAM. 
+--В результате каждая пара указывается только один раз, т.е. (i,j), но не (j,i), 
+--Порядок вывода: модель с большим номером, модель с меньшим номером, скорость и RAM. 
+
+SELECT DISTINCT PC_A.model, PC_B.model, PC_A.speed, PC_A.ram 
+FROM PC AS PC_A, PC AS PC_B
+Where 
+PC_A.speed = PC_B.speed 
+AND PC_A.ram = PC_B.ram 
+AND PC_A.model > PC_B.model
