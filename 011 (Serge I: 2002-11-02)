@@ -1,0 +1,4 @@
+--https://sql-ex.ru/learn_exercises.php#answer_ref
+--Найдите среднюю скорость ПК. 
+
+SELECT AVG(speed) FROM PC
