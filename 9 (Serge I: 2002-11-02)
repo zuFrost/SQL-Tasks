@@ -1,0 +1,7 @@
+--https://sql-ex.ru/learn_exercises.php#answer_ref
+--Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker 
+
+SELECT DISTINCT maker FROM PC 
+RIGHT JOIN Product
+ON PC.model = Product.model
+WHERE PC.speed >= '450'
